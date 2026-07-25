@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique de Pisos | Showroom de Terminaciones & Diseños en Pergamino</title>
+    <meta name="description" content="Showroom de pisos, porcelanatos, revestimientos y terminaciones de alta gama en Pergamino. Asesoramiento profesional y envíos en la región.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#1A1817',      /* Charcoal Slate */
+                            warm: '#2C2825',      /* Deep Taupe */
+                            gold: '#C5A059',      /* Muted Gold */
+                            goldlight: '#E6C887', /* Light Gold */
+                            cream: '#F9F8F6',     /* Warm Cream */
+                            accent: '#8C6D46',    /* Bronze/Wood Tone */
+                            graylight: '#F3F2EE'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-header {
+            background: rgba(26, 24, 23, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-bg {
+            background: linear-gradient(180deg, rgba(26, 24, 23, 0.75) 0%, rgba(26, 24, 23, 0.85) 100%), 
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+    </style>
+</head>
+<body class="font-sans bg-brand-cream text-brand-dark antialiased selection:bg-brand-gold selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-50 glass-header border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <a href="#inicio" class="flex items-center space-x-3 group">
+                    <img src="Logo btq.png" alt="Logo Boutique de Pisos" class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x50/1A1817/C5A059?text=Boutique+de+Pisos';">
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-sm font-medium text-gray-300 hover:text-brand-gold transition-colors">Inicio</a>
+                    <a href="#nosotros" class="text-sm font-medium text-gray-300 hover:text-brand-gold transition-colors">Nosotros</a>
+                    <a href="#productos" class="text-sm font-medium text-gray-300 hover:text-brand-gold transition-colors">Productos</a>
+                    <a href="#ubicacion" class="text-sm font-medium text-gray-300 hover:text-brand-gold transition-colors">Showroom</a>
+                    <a href="#contacto" class="text-sm font-medium text-gray-300 hover:text-brand-gold transition-colors">Contacto</a>
+                </nav>
+
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#contacto" class="bg-brand-gold hover:bg-brand-goldlight text-brand-dark font-semibold text-sm px-6 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-brand-gold/20 hover:-translate-y-0.5">
+                        <i class="fa-regular font-normal fa-paper-plane mr-2"></i>Solicitar Presupuesto
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark/95 border-b border-white/10 px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="mobile-link block text-gray-200 hover:text-brand-gold font-medium py-2">Inicio</a>
+            <a href="#nosotros" class="mobile-link block text-gray-200 hover:text-brand-gold font-medium py-2">Nosotros</a>
+            <a href="#productos" class="mobile-link block text-gray-200 hover:text-brand-gold font-medium py-2">Productos</a>
+            <a href="#ubicacion" class="mobile-link block text-gray-200 hover:text-brand-gold font-medium py-2">Showroom</a>
+            <a href="#contacto" class="mobile-link block text-gray-200 hover:text-brand-gold font-medium py-2">Contacto</a>
+            <a href="#contacto" class="mobile-link block text-center bg-brand-gold text-brand-dark font-semibold py-3 rounded-xl mt-4">
+                Solicitar Presupuesto
+            </a>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative min-h-screen flex items-center pt-24 hero-bg text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 w-full">
+            <div class="max-w-3xl">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest bg-brand-gold/20 text-brand-gold border border-brand-gold/30 mb-6">
+                    <i class="fa-solid fa-location-dot"></i> Merced 352, Pergamino
+                </span>
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-white mb-6">
+                    Diseñamos los espacios donde <span class="text-brand-gold italic">empieza tu hogar.</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-300 font-light leading-relaxed mb-8 max-w-2xl">
+                    Transformá tus ambientes con la máxima elegancia y calidad. Porcelanatos, pisos vinílicos, flotantes, griferías y sanitarios con asesoramiento personalizado en Pergamino y la región.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                    <a href="#contacto" class="inline-flex items-center justify-center bg-brand-gold hover:bg-brand-goldlight text-brand-dark font-bold px-8 py-4 rounded-full text-base transition-all duration-300 shadow-xl hover:-translate-y-1">
+                        Cotizar mi Proyecto
+                        <i class="fa-solid fa-arrow-right ml-3"></i>
+                    </a>
+                    <a href="#productos" class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-medium px-8 py-4 rounded-full text-base backdrop-blur-sm border border-white/20 transition-all duration-300">
+                        Explorar Catálogo
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-3 gap-6 mt-16 pt-10 border-t border-white/10 text-center sm:text-left">
+                    <div>
+                        <p class="text-2xl sm:text-3xl font-serif font-bold text-brand-gold">+15</p>
+                        <p class="text-xs sm:text-sm text-gray-400">Años de trayectoria</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl sm:text-3xl font-serif font-bold text-brand-gold">100%</p>
+                        <p class="text-xs sm:text-sm text-gray-400">Stock disponible</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl sm:text-3xl font-serif font-bold text-brand-gold">Integral</p>
+                        <p class="text-xs sm:text-sm text-gray-400">Asesoramiento técnico</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-dark text-white rounded-3xl p-8 sm:p-12 lg:p-16 shadow-2xl relative overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                    <div class="lg:col-span-5">
+                        <span class="text-brand-gold font-semibold text-sm uppercase tracking-wider">Atención Personalizada</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2 mb-6">Solicitá tu presupuesto sin compromiso</h2>
+                        <p class="text-gray-300 mb-8 leading-relaxed">Completa el formulario y uno de nuestros asesores técnicos se pondrá en contacto para aconsejarte sobre rendimientos y combinación de materiales.</p>
+                    </div>
+                    <div class="lg:col-span-7 bg-white/5 border border-white/10 p-6 sm:p-8 rounded-2xl">
+                        <form id="lead-form" class="space-y-5" onsubmit="handleFormSubmit(event)">
+                            <div>
+                                <label for="nombre" class="block text-sm font-medium text-gray-200 mb-1">Nombre Completo *</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Ej. María González" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-brand-gold">
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="telefono" class="block text-sm font-medium text-gray-200 mb-1">Teléfono / WhatsApp *</label>
+                                    <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 2477 123456" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-brand-gold">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-200 mb-1">Email *</label>
+                                    <input type="email" id="email" name="email" required placeholder="tu@email.com" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-brand-gold">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="producto_interes" class="block text-sm font-medium text-gray-200 mb-1">Tipo de Producto de Interés</label>
+                                <select id="producto_interes" name="producto_interes" class="w-full bg-brand-dark border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-gold">
+                                    <option value="Porcelanatos y Cerámicos">Porcelanatos y Cerámicos</option>
+                                    <option value="Pisos Vinílicos SPC/LVT">Pisos Vinílicos (SPC / LVT)</option>
+                                    <option value="Pisos Flotantes">Pisos Flotantes de Madera</option>
+                                    <option value="Sanitarios y Griferías">Sanitarios y Griferías</option>
+                                    <option value="Revestimientos y Zócalos">Revestimientos y Zócalos</option>
+                                    <option value="Mamparas y Accesorios">Mamparas y Accesorios</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="mensaje" class="block text-sm font-medium text-gray-200 mb-1">Mensaje o Detalle del Proyecto</label>
+                                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Indicanos m² aproximados o estilo..." class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-brand-gold"></textarea>
+                            </div>
+                            <button type="submit" id="submit-btn" class="w-full bg-brand-gold hover:bg-brand-goldlight text-brand-dark font-bold py-4 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2">
+                                <span>Enviar Solicitud</span>
+                                <i class="fa-solid fa-paper-plane text-sm"></i>
+                            </button>
+                            <div id="form-success" class="hidden p-4 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-sm text-center">
+                                <i class="fa-solid fa-circle-check mr-2"></i> ¡Muchas gracias! Tu mensaje ha sido enviado con éxito.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-white border-t border-white/10 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-white/10">
+                <img src="Logo btq.png" alt="Logo Boutique de Pisos" class="h-10 w-auto object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x50/1A1817/C5A059?text=Boutique+de+Pisos';">
+                <p class="text-sm text-gray-400">Merced 352, Pergamino, Buenos Aires</p>
+            </div>
+            <div class="pt-8 text-center text-xs text-gray-500">
+                © 2026 Boutique de Pisos. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/542477000000" target="_blank" rel="noopener" aria-label="Contacto por WhatsApp" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const submitBtn = document.getElementById('submit-btn');
+            const successMsg = document.getElementById('form-success');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> <span>Enviando...</span>`;
+            setTimeout(() => {
+                submitBtn.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
